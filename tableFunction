@@ -1,0 +1,102 @@
+const handleChange = (event) => {
+        const { name, value } = event.target
+        setRow({...row, [name]: value})
+    }
+
+  
+    const handleSubmit = event => {
+        event.preventDefault()
+        const newRow = {
+            title: row.title,
+            description: row.description,
+            risk: row.risk,
+            priority: row.priority,
+            type: row.type
+        }
+        console.log(newRow)
+    }
+  
+  return (
+    <div className="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Full Description</th>
+            <th>Risk</th>
+            <th>Priority</th>
+            <th>Type</th>
+            <th>
+              <button type="submit">
+                Edit
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            data.map(item => (
+              <tr key={item.id}>
+                <th>{item.title}</th>
+                <th>{item.description}</th>
+                <th>{item.risk}</th>
+                <th>{item.priority}</th>
+                <th>{item.type}</th>
+                <th>Edit</th>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+      
+      <form onSubmit={handleSubmit}>
+          <TextField
+              label="Title"
+              id="title"
+              name="title"
+              onChange={handleChange}
+          />
+          <TextField
+              label="Description"
+              id="description"
+              name="description"
+              onChange={handleChange}
+          />
+          <Select
+            label="Risk"
+            id="risk"
+            name="risk"
+            defaultValue="Undefined"
+            onChange={handleChange}
+          >
+            <MenuItem value="Undefined">Undefined</MenuItem>
+            <MenuItem value="Low">Low</MenuItem>
+            <MenuItem value="Medium">Medium</MenuItem>
+            <MenuItem value="High">High</MenuItem>
+          </Select>
+          <Select
+            label="Priority"
+            id="priority"
+            name="priority"
+            defaultValue="Undefined"
+            onChange={handleChange}
+          >
+            <MenuItem value="Undefined">Undefined</MenuItem>
+            <MenuItem value={1}>1</MenuItem>
+            <MenuItem value={1.5}>1.5</MenuItem>
+            <MenuItem value={2}>2</MenuItem>
+          </Select>
+          <TextField
+              label="Type"
+              id="type"
+              name="type"
+              onChange={handleChange}
+          />
+          <Button
+              type="submit"
+              variant="contained"
+          >Add Row
+          </Button>
+      </form>
+      
+    </div>

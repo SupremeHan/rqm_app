@@ -1,0 +1,65 @@
+{
+    "title": "Moj RQM 2",
+    "projectId": "nekiProjectId1",
+    "users": [
+        {
+            "name": "Tim lider",
+            "description": "Vodja tima."
+        },
+        {
+            "name": "Clan tima",
+            "description": "Obicna clan tima."
+        }
+    ],
+    "requirements": [
+        {
+            "title": "Prvi RQM zahtev",
+            "description": "Opis prvog zahteva",
+            "type": "FUNCTIONAL",
+            "priority": 1,
+            "risk": "LOW"
+        },
+        {
+            "title": "Drugi RQM zahtev",
+            "description": "Opis drugog zahteva",
+            "type": "FUNCTIONAL",
+            "priority": 1,
+            "risk": "LOW",
+            "subRequirements": [
+                {
+                    "title": "2.1",
+                    "description": "Opis drugog.2 zahteva",
+                    "type": "FUNCTIONAL",
+                    "priority": 2,
+                    "risk": "LOW",
+                    "allocatedUsers": [
+                        {
+                            "name": "Clan tima",
+                            "description": "Obicna clan tima."
+                        }
+                    ]
+                },
+                {
+                    "title": "2.2",
+                    "description": "Opis drugog.2 zahteva",
+                    "type": "FUNCTIONAL",
+                    "priority": 2,
+                    "risk": "LOW",
+                    "allocatedUsers": [
+                        {
+                            "name": "Clan tima",
+                            "description": "Obicna clan tima."
+                        }
+                    ]
+                }
+            ],
+            "allocatedUsers": [
+                {
+                    "name": "Tim lider",
+                    "description": "Vodja tima."
+                }
+            ]
+        }
+    ]
+    
+}

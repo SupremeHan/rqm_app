@@ -1,0 +1,48 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+table {
+  border-spacing: 0;
+  border: 1px solid black;
+  table-layout: fixed;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+th,
+td {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  width: 100px;
+}
+
+th:last-child,
+td:last-child {
+  border-right: 0;
+}
+
+.diagram-component {
+  width: 100%;
+  min-height: 800px;
+  border: solid 1px black;
+  background-color: white;
+}
+
+.diagram-wrapper {
+  display: flex;
+}
+
+.diagram-sideBar {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.diagram-sideBar button {
+  margin: 20px 10px;
+}
